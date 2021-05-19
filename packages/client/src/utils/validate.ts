@@ -76,6 +76,12 @@ const mobilePhonePatternTable: { [key: string]: IMobilePhonePattern } = {
     example: '0970545855',
     start: '0[7|9]',
     num: '10'
+  },
+  gmb: {
+    pattern: /^4[0-9]{6}$/,
+    example: '4312345',
+    start: '4',
+    num: '7'
   }
 }
 
