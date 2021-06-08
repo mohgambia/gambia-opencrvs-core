@@ -822,7 +822,8 @@ export const enum GQLIdentityIDType {
   ALIEN_NUMBER = 'ALIEN_NUMBER',
   OTHER = 'OTHER',
   NO_ID = 'NO_ID',
-  SOCIAL_SECURITY_NO = 'SOCIAL_SECURITY_NO'
+  SOCIAL_SECURITY_NO = 'SOCIAL_SECURITY_NO',
+  MY_CHILD_ID = 'MY_CHILD_ID'
 }
 
 export const enum GQLAddressType {

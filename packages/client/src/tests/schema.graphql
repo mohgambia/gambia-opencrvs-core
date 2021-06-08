@@ -410,6 +410,7 @@ enum IdentityIDType {
   OTHER
   NO_ID
   SOCIAL_SECURITY_NO
+  MY_CHILD_ID
 }
 
 input IdentityInput {

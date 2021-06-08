@@ -749,7 +749,15 @@ export function setObjectPropInResourceArray(
   if (!resource[label][context._index[label]]) {
     resource[label][context._index[label]] = {}
   }
-  resource[label][context._index[label]][propName] = value
+
+  const propertyResource = resource[label][context._index[label]][propName]
+  if (propertyResource === undefined) {
+    resource[label][context._index[label]][propName] = value
+  } else {
+    resource[label][context._index[label]][propName] = propertyResource.concat(
+      value
+    )
+  }
 }
 
 export function setArrayPropInResourceObject(
