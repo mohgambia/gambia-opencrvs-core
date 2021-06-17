@@ -13,5 +13,7 @@
 export interface Person extends fhir.Patient {
 
     race?: string
+
+    ethnicity?: string
     
 }

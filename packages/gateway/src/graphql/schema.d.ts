@@ -132,6 +132,7 @@ export interface GQLPerson {
   telecom?: Array<GQLContactPoint | null>
   gender?: string
   race?: string
+  ethnicity?: string
   birthDate?: string
   maritalStatus?: GQLMaritalStatusType
   occupation?: string
@@ -660,6 +661,7 @@ export interface GQLPersonInput {
   telecom?: Array<GQLContactPointInput | null>
   gender?: string
   race?: string
+  ethnicity?: string
   birthDate?: string
   maritalStatus?: GQLMaritalStatusType
   occupation?: string
@@ -2445,6 +2447,7 @@ export interface GQLPersonTypeResolver<TParent = any> {
   telecom?: PersonToTelecomResolver<TParent>
   gender?: PersonToGenderResolver<TParent>
   race?: PersonToRaceResolver<TParent>
+  ethnicity?: PersonToEthnicityResolver<TParent>
   birthDate?: PersonToBirthDateResolver<TParent>
   maritalStatus?: PersonToMaritalStatusResolver<TParent>
   occupation?: PersonToOccupationResolver<TParent>
@@ -2482,6 +2485,10 @@ export interface PersonToGenderResolver<TParent = any, TResult = any> {
 }
 
 export interface PersonToRaceResolver<TParent = any, TResult = any> {
+  (parent: TParent, args: {}, context: any, info: GraphQLResolveInfo): TResult
+}
+
+export interface PersonToEthnicityResolver<TParent = any, TResult = any> {
   (parent: TParent, args: {}, context: any, info: GraphQLResolveInfo): TResult
 }
 

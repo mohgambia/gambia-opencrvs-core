@@ -1098,6 +1098,14 @@ const builders: IFieldBuilders = {
       )
       child.race = fieldValue as string
     },
+    ethnicity: (fhirBundle, fieldValue, context) => {
+      const child = selectOrCreatePersonResource(
+        CHILD_CODE,
+        CHILD_TITLE,
+        fhirBundle
+      )
+      child.ethnicity = fieldValue as string
+    },
     identifier: createIDBuilder(CHILD_CODE, CHILD_TITLE),
     name: createNameBuilder(CHILD_CODE, CHILD_TITLE),
     telecom: createTelecomBuilder(CHILD_CODE, CHILD_TITLE),

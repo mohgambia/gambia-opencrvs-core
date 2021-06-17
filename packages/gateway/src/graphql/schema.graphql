@@ -237,6 +237,7 @@ type Person {
   telecom: [ContactPoint]
   gender: String
   race: String
+  ethnicity: String
   birthDate: String
   maritalStatus: MaritalStatusType
   occupation: String
@@ -743,6 +744,7 @@ input PersonInput {
   telecom: [ContactPointInput]
   gender: String
   race: String
+  ethnicity: String
   birthDate: String
   maritalStatus: MaritalStatusType
   occupation: String

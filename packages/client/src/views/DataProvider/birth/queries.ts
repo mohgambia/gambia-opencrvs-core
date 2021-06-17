@@ -33,6 +33,7 @@ export const GET_BIRTH_REGISTRATION_FOR_REVIEW = gql`
         birthDate
         gender
         race
+        ethnicity
       }
       informant {
         id
@@ -211,6 +212,7 @@ export const GET_BIRTH_REGISTRATION_FOR_CERTIFICATE = gql`
         birthDate
         gender
         race
+        ethnicity
       }
       mother {
         id
