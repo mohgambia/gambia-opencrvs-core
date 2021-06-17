@@ -157,6 +157,7 @@ input PersonInput {
   name: [HumanNameInput]
   telecom: [ContactPointInput]
   gender: String
+  race: String
   birthDate: String
   maritalStatus: MaritalStatusType # Not in BDRIS2 - keep as optional
   occupation: String
@@ -177,6 +178,7 @@ type Person { # -> Patient
   name: [HumanName] # -> .name
   telecom: [ContactPoint] # -> .telecom
   gender: String # -> .gender
+  race: String # -> .race
   birthDate: String # -> birthDate
   maritalStatus: MaritalStatusType # -> .maritalStatus
   occupation: String

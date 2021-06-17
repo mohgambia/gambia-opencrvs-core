@@ -65,6 +65,7 @@ import {
   GQLEventIn45DayEstimationCount
 } from '@gateway/graphql/schema'
 import { reduce } from 'lodash'
+import { Person } from '@opencrvs/commons'
 
 export interface ITimeLoggedResponse {
   status?: string
@@ -101,7 +102,7 @@ export function selectOrCreatePersonResource(
   sectionCode: string,
   sectionTitle: string,
   fhirBundle: ITemplatedBundle
-): fhir.Patient {
+): Person {
   const section = findCompositionSectionInBundle(sectionCode, fhirBundle)
 
   let personEntry

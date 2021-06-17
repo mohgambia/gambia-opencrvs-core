@@ -32,6 +32,7 @@ export const GET_BIRTH_REGISTRATION_FOR_REVIEW = gql`
         }
         birthDate
         gender
+        race
       }
       informant {
         id
@@ -196,6 +197,11 @@ export const GET_BIRTH_REGISTRATION_FOR_CERTIFICATE = gql`
       id
       child {
         id
+        identifier {
+          id
+          type
+          otherType
+        }
         multipleBirth
         name {
           use
@@ -204,6 +210,7 @@ export const GET_BIRTH_REGISTRATION_FOR_CERTIFICATE = gql`
         }
         birthDate
         gender
+        race
       }
       mother {
         id
